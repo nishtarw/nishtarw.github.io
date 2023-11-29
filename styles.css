@@ -7,13 +7,13 @@ body {
 h1 {
  color: maroon;
  text-align: center;
- width: 100%;
+ width: 100 %;
  display: block;
 }
 h1:hover {
  color: hotpink;
  text-align: center;
- width: 100%;
+ width: 100 %;
  display: block;
 }
 a {
@@ -22,20 +22,20 @@ a {
 }
 .assign {
  background-color: grey;
- margin: 10px;
- padding: 10px;
- border-radius: 20px;
- width: 20%;
- box-shadow: 8px 8px brown;
+ margin: 10 px;
+ padding: 10 px;
+ border-radius: 20 px;
+ width: 20 %;
+ box-shadow: 8 px 8 px brown;
  display: block; /* instead of flex */
 }
 .assign img {
- width: 200px;
- margin: 10px;
- border: 2px solid midnightblue;
+ width: 200 px;
+ margin: 10 px;
+ border: 2 px solid midnightblue;
 }
 .assign img:hover {
- width: 200px;
- margin: 10px;
- border: 2px dotted yellow;
+ width: 200 px;
+ margin: 10 px;
+ border: 2 px dotted yellow;
 }
