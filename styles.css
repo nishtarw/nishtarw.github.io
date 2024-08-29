@@ -1,41 +1,49 @@
+/* Apply a nice font to the whole page */
 body {
- background: [lightblue];
- font-family: Arial, Helvetica, sans-serif;
- display: flex;
- flex-wrap: wrap;
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Default text color */
+    background-color: #f0f8ff; /* Light background color */
+    margin: 0;
+    padding: 0;
 }
-h1 {
- color: maroon;
- text-align: center;
- width: 100%;
- display: block;
+
+/* Container to format the main content */
+#container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-h1:hover {
- color: hotpink;
- text-align: center;
- width: 100%;
- display: block;
-}
+
+/* Styling for links */
 a {
- text-decoration: none;
- color: black;
+    text-decoration: none; /* Remove underline */
+    color: #1e90ff; /* Color for links */
 }
-.assign {
- background-color: grey;
- margin: 10px;
- padding: 10px;
- border-radius: 20px;
- width: 20%;
- box-shadow: 8px 8px brown;
- display: block; /* instead of flex */
+
+/* Styling for visited links */
+a:visited {
+    color: #551a8b; /* Color for visited links */
 }
-.assign img {
- width: 200px;
- margin: 10px;
- border: 2px solid midnightblue;
+
+/* Styling for links on hover */
+a:hover {
+    color: #ff4500; /* Color for links when hovered */
 }
-.assign img:hover {
- width: 200px;
- margin: 10px;
- border: 2px dotted yellow;
+
+/* Change the color of headers */
+h1, h2 {
+    color: #4682b4; /* Matching color for headers */
+}
+
+/* Style for assignments list */
+#assignments {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+#assignments li {
+    margin: 10px 0;
 }

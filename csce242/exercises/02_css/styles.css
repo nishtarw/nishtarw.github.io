@@ -1,0 +1,49 @@
+/*Structure */
+body {
+    background:violet;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#content {
+    background:white;
+    padding:5px;
+    margin:20px auto;
+    width:70%;
+    border-radius:10px;
+    border:5px solid green;
+}
+
+/*Navigation */
+#main-nav ul {
+    padding-left: 0; /* removes the left padding */
+    width:fit-content;
+    margin:auto;
+}
+
+#main-nav li {
+    list-style-type: none; /* no bulletes */
+    display:inline-block; /* appear on one line */
+}
+
+#main-nav a {
+text-decoration:none; /*no underline */
+background:#FF8DA1;
+color:white;
+padding:5px;
+margin:5px;
+border-radius:2px;
+}
+
+#main-nav a:hover {
+    background:black;
+    color:#FF8DA1;
+}
+
+/*Typography */
+h1 {
+    color:red;
+}
+
+p{
+    color:blue;
+}
