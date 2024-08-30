@@ -1,46 +1,39 @@
-/* Apply a nice font to the whole page */
 body {
-    font-family: 'Arial', sans-serif;
-    color: #333; /* Default text color */
-    background-color: #f0f8ff; /* Light background color */
+    font-family: 'Verdana', sans-serif;
+    color: #333;
+    background-color: #ffe4e1;
     margin: 0;
     padding: 0;
 }
 
-/* Container to format the main content */
 #container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff; /* White background for content */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #ffffff;
+    border-radius: 8px;
+    
 }
 
-/* Styling for links */
 a {
-    text-decoration: none; /* Remove underline */
-    color: #1e90ff; /* Color for links */
+    text-decoration: none;
+    color: #ff1493;
 }
 
-/* Styling for visited links */
 a:visited {
-    color: #551a8b; /* Color for visited links */
+    color: #db7093;
 }
 
-/* Styling for links on hover */
 a:hover {
-    color: #ff4500; /* Color for links when hovered */
+    color: #ff69b4;
 }
 
-/* Change the color of headers */
 h1, h2 {
-    color: #4682b4; /* Matching color for headers */
+    color: #6c0559;
 }
 
-/* Style for assignments list */
 #assignments {
-    list-style-type: none; /* Remove default list styling */
+    list-style-type: none;
     padding: 0;
 }
 

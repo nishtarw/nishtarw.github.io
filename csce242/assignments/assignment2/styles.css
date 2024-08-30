@@ -1,0 +1,66 @@
+body {
+    font-family: 'Georgia', serif;
+    color: #2f4f4f;
+    background-image: url('https://plus.unsplash.com/premium_photo-1670591909028-1ea631e317d7?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+}
+
+nav {
+    text-align: center; /* Center the nav content */
+    padding: 0; /* Remove extra padding */
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #20b2aa;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 0 10px; /* Space between links */
+    display: inline-block; /* Ensure links stay inline */
+}
+
+.nav-link:hover {
+    background-color: #3cb371;
+}
+
+.beach-image {
+    border: 2px solid #8bd0fb;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: block;
+    max-width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #4682b4;
+    color: #fff;
+}
+
+td {
+    background-color: #f0f8ff;
+}
