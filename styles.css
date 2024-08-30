@@ -1,7 +1,7 @@
 body {
     font-family: 'Verdana', sans-serif;
-    color: #333; /* Default text color */
-    background-color: #e0f7fa; /* Light teal background color */
+    color: #333; 
+    background-color: #e0f7fa; 
     margin: 0;
     padding: 0;
 }
@@ -10,38 +10,38 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff; /* White container background */
+    background-color: #ffffff; 
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    
 }
 
 a {
     text-decoration: none;
-    color: #00796b; /* Link color */
+    color: #00796b; 
 }
 
 a:visited {
-    color: ##8dbab3; /* Visited link color */
+    color: ##8dbab3; 
 }
 
 a:hover {
-    color: #8dbab3; /* Hover link color */
+    color: #8dbab3; 
 }
 
 h1 {
-    color: #004d40; /* Main heading color */
+    color: #004d40; 
 }
 
 h2 {
-    color: #00796b; /* Subheading color */
+    color: #00796b; 
 }
 
 h3 {
-    color: #004d40; /* Subheading color */
+    color: #004d40; 
 }
 
 p {
-    color: #333; /* Paragraph text color */
+    color: #333; 
 }
 
 #assignments {
