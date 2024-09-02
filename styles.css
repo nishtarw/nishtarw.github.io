@@ -95,5 +95,6 @@ a:hover {
     }
     .assignment {
         width: 90%;
+        margin-bottom: 20px; /* Ensure there's space between assignments */
     }
 }

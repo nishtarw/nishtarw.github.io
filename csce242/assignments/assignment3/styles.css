@@ -91,6 +91,7 @@ footer {
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
+        align-items: center; /* Center items horizontally */
     }
 
     .container {
@@ -102,9 +103,8 @@ footer {
         margin-bottom: 20px;
     }
 
-    .grid article {
-        flex: 1 1 100%;
-        margin-bottom: 20px;
+    .grid {
+        grid-template-columns: 1fr; /* Single column layout for grid items */
     }
 
     .ideas .idea-item {
