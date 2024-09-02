@@ -40,6 +40,7 @@ nav ul li a {
 .container {
     display: flex;
     margin: 20px;
+    /* Add a default gap for larger screens if needed */
 }
 
 .grid {
@@ -49,8 +50,6 @@ nav ul li a {
 }
 
 .grid article {
-    /* Removed background-color and padding to avoid extra space */
-    /* No border or additional styling */
     text-align: center;
 }
 
@@ -90,30 +89,37 @@ footer {
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column;
+        flex-direction: column; /* Stack navigation items vertically */
         align-items: center; /* Center items horizontally */
     }
 
     .container {
-        flex-direction: column;
+        flex-direction: column; /* Stack container items vertically */
     }
 
     .links {
-        margin-left: 0;
-        margin-bottom: 20px;
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 20px; /* Add space below links section */
+        width: 100%; /* Full width for links section */
     }
 
     .grid {
         grid-template-columns: 1fr; /* Single column layout for grid items */
+        gap: 20px; /* Increase gap if needed */
+    }
+
+    .ideas {
+        padding: 10px; /* Reduce padding for smaller screens */
+        margin: 10px; /* Adjust margin for smaller screens */
     }
 
     .ideas .idea-item {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center; /* Center text */
     }
 
     .ideas .idea-item img {
-        margin-right: 0;
-        margin-bottom: 20px;
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add space below image */
     }
 }
