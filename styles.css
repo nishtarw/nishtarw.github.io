@@ -6,13 +6,73 @@ body {
     padding: 0;
 }
 
+header, footer {
+    background-color: #ffffff;
+    padding: 20px;
+}
+
 #container {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff; 
     border-radius: 8px;
-    
+    position: relative; /* Ensure this container is the reference point for absolute positioning */
+}
+
+.name {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #004d40; 
+}
+
+h1 {
+    color: #004d40; 
+    text-align: center;
+}
+
+h2 {
+    color: #00796b; 
+    text-align: center;
+}
+
+h3 {
+    color: #004d40; 
+    text-align: center;
+}
+
+p {
+    color: #333; 
+    text-align: center;
+}
+
+.assignments-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Ensure wrapping of items in smaller screens */
+    margin-top: 20px;
+}
+
+.assignment {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.assignment-image {
+    width: 100%;
+    height: auto;
+    background-color: #cccccc;
+    margin-bottom: 10px;
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 a {
@@ -21,34 +81,19 @@ a {
 }
 
 a:visited {
-    color: ##8dbab3; 
+    color: #8dbab3; 
 }
 
 a:hover {
     color: #8dbab3; 
 }
 
-h1 {
-    color: #004d40; 
-}
-
-h2 {
-    color: #00796b; 
-}
-
-h3 {
-    color: #004d40; 
-}
-
-p {
-    color: #333; 
-}
-
-#assignments {
-    list-style-type: none;
-    padding: 0;
-}
-
-#assignments li {
-    margin: 10px 0;
+@media (max-width: 768px) {
+    .assignments-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .assignment {
+        width: 90%;
+    }
 }

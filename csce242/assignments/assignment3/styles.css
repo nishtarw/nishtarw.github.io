@@ -1,0 +1,119 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #e0f7fa; /* Light cyan background */
+}
+
+header, footer {
+    background-color: #00796b; /* Teal */
+    color: #ffffff; /* White text */
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav {
+    background-color: #004d40; /* Darker teal */
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #ffffff; /* White text */
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates a grid with four equal columns */
+    gap: 10px; /* Adjust the gap between grid items */
+}
+
+.grid article {
+    /* Removed background-color and padding to avoid extra space */
+    /* No border or additional styling */
+    text-align: center;
+}
+
+.links {
+    flex: 1;
+    background-color: #004d40; /* Darker teal */
+    padding: 20px;
+    color: #ffffff; /* White text */
+    margin-left: 20px;
+    min-width: 200px;
+}
+
+.ideas {
+    background-color: #ffffff; /* White background */
+    padding: 20px;
+    margin: 20px;
+}
+
+.ideas .idea-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ideas .idea-item img {
+    margin-right: 20px;
+}
+
+footer {
+    background-color: #00796b; /* Teal */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .links {
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
+    .grid article {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .ideas .idea-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ideas .idea-item img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
