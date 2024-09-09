@@ -1,4 +1,3 @@
-/* Global styles */
 body {
     font-family: 'Verdana', sans-serif;
     color: #333; 
@@ -18,7 +17,7 @@ header, footer {
     padding: 20px;
     background-color: #ffffff; 
     border-radius: 8px;
-    position: relative; /* Ensure this container is the reference point for absolute positioning */
+    position: relative;
 }
 
 .name {
@@ -48,14 +47,14 @@ p {
     text-align: center;
 }
 
-.assignments-container {
+.assignments-container, .projects-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Ensure wrapping of items in smaller screens */
+    flex-wrap: wrap;
     margin-top: 20px;
 }
 
-.assignment {
+.assignment, .project {
     background-color: #f0f0f0;
     padding: 15px;
     border-radius: 8px;
@@ -64,7 +63,7 @@ p {
     margin-bottom: 20px;
 }
 
-.assignment-image {
+.assignment-image, .project-image {
     width: 100%;
     height: auto;
     background-color: #cccccc;
@@ -89,27 +88,24 @@ a:hover {
     color: #8dbab3; 
 }
 
-/* Media Query for smaller screens */
 @media (max-width: 768px) {
-    .assignments-container {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
+    .assignments-container, .projects-container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .assignment {
-        width: 90%; /* Make assignments full-width with some margin on smaller screens */
-        margin-bottom: 20px; /* Space between items */
+    .assignment, .project {
+        width: 90%;
+        margin-bottom: 20px;
     }
 
-    /* Ensure container adjusts to full width on smaller screens */
     #container {
-        width: 100%; /* Full width on smaller screens */
-        padding: 10px; /* Reduce padding for smaller screens */
+        width: 100%;
+        padding: 10px;
     }
 
-    /* Adjust headings and paragraphs to fit better */
     h1, h2, h3, p {
-        margin: 0; /* Remove margins for better spacing */
-        padding: 10px 0; /* Add padding for better spacing */
+        margin: 0;
+        padding: 10px 0;
     }
 }

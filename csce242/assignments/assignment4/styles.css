@@ -1,0 +1,145 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #003366; /* Dark Blue */
+    padding: 15px;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #004080; /* Darker Blue */
+    padding: 50px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    width: 50%;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #cc0000; /* Red button */
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+/* Section */
+.section {
+    padding: 50px 0;
+    background-color: #f1f1f1;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.text-content {
+    width: 50%;
+    padding: 20px;
+}
+
+.image-content {
+    width: 50%;
+    text-align: center;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+h2 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Reverse Section */
+.reverse .text-content {
+    order: 2;
+}
+
+.reverse .image-content {
+    order: 1;
+}
+
+/* Footer */
+.footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
