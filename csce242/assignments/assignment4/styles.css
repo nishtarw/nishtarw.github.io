@@ -1,145 +1,89 @@
-/* Global Styles */
+/* General reset for margins and padding */
+        /* Black top div */
+        .top-bar {
+            background-color: #000; /* Black background */
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Placeholder logo on the left */
+        .top-bar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .top-bar .logo img {
+            height: 40px; /* Placeholder logo height */
+            margin-right: 10px;
+        }
+
+        /* Small text on the right */
+        .top-bar .right-text {
+            font-size: 12px;
+            text-align: right;
+        }
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Include padding and borders in width calculations */
 }
 
+/* Prevent horizontal scrolling */
 body {
+    overflow-x: hidden;
     font-family: Arial, sans-serif;
-    line-height: 1.6;
 }
 
-a {
-    text-decoration: none;
-}
-
-/* Navbar */
+/* Navbar styling */
 .navbar {
-    background-color: #003366; /* Dark Blue */
-    padding: 15px;
-}
-
-.navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.navbar li {
-    margin: 0 20px;
+    background-color: #6c1d45; /* Dark red */
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    overflow: hidden; /* Prevent overflow */
 }
 
 .navbar a {
-    color: #fff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
-}
-
-/* Hero Section */
-.hero-section {
-    background-color: #004080; /* Darker Blue */
-    padding: 50px 0;
-    text-align: center;
-    color: #fff;
-}
-
-.hero-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.hero-text {
-    width: 50%;
-    padding: 20px;
-}
-
-.hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.cta-button {
     display: inline-block;
-    background-color: #cc0000; /* Red button */
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: #8b233e; /* Hover red */
+}
+
+/* Container for the image and the overlaying text */
+.header-banner {
+    position: relative;
+    text-align: left; /* Align the text to the left */
+}
+
+/* The image itself */
+.header-banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* The text overlay */
+.text-overlay {
+    position: absolute;
+    top: 50%; /* Vertically center */
+    left: 0; /* Align to the left edge of the image */
+    transform: translateY(200%); /* Vertically center relative to itself */
+    background-color: rgba(128, 0, 0, 0.8); /* Semi-transparent background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 2em;
     font-weight: bold;
-    border-radius: 5px;
+
+    /* Move halfway outside the image */
+    width: 50vw; /* Adjust this width as needed */
+    margin-left: 4vw; /* Push it left to be halfway out of the image */
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
-/* Section */
-.section {
-    padding: 50px 0;
-    background-color: #f1f1f1;
-}
-
-.section-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.text-content {
-    width: 50%;
-    padding: 20px;
-}
-
-.image-content {
-    width: 50%;
-    text-align: center;
-}
-
-.image-content img {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-}
-
-h2 {
-    font-size: 32px;
-    color: #003366;
-    margin-bottom: 20px;
-}
-
-p {
-    font-size: 16px;
-    color: #333;
-}
-
-/* Reverse Section */
-.reverse .text-content {
-    order: 2;
-}
-
-.reverse .image-content {
-    order: 1;
-}
-
-/* Footer */
-.footer {
-    background-color: #003366;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-}
