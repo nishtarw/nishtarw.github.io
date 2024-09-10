@@ -1,21 +1,20 @@
-/* Global styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #e0f7fa; /* Light cyan background */
+    background-color: #e0f7fa;
 }
 
 header, footer {
-    background-color: #00796b; /* Teal */
-    color: #ffffff; /* White text */
+    background-color: #00796b;
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
 }
 
 nav {
-    background-color: #004d40; /* Darker teal */
+    background-color: #004d40;
     padding: 10px 0;
 }
 
@@ -33,20 +32,19 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ffffff; /* White text */
+    color: #ffffff;
     text-decoration: none;
 }
 
 .container {
     display: flex;
     margin: 20px;
-    /* Add a default gap for larger screens if needed */
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Creates a grid with four equal columns */
-    gap: 10px; /* Adjust the gap between grid items */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
 
 .grid article {
@@ -55,15 +53,15 @@ nav ul li a {
 
 .links {
     flex: 1;
-    background-color: #004d40; /* Darker teal */
+    background-color: #004d40;
     padding: 20px;
-    color: #ffffff; /* White text */
+    color: #ffffff;
     margin-left: 20px;
     min-width: 200px;
 }
 
 .ideas {
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
     padding: 20px;
     margin: 20px;
 }
@@ -79,47 +77,46 @@ nav ul li a {
 }
 
 footer {
-    background-color: #00796b; /* Teal */
-    color: #ffffff; /* White text */
+    background-color: #00796b;
+    color: #ffffff;
     padding: 10px;
     text-align: center;
     margin-top: 20px;
 }
 
-/* Media Query for smaller screens */
 @media (max-width: 768px) {
     nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center; /* Center items horizontally */
+        flex-direction: column;
+        align-items: center;
     }
 
     .container {
-        flex-direction: column; /* Stack container items vertically */
+        flex-direction: column;
     }
 
     .links {
-        margin-left: 0; /* Remove left margin */
-        margin-bottom: 20px; /* Add space below links section */
-        width: 100%; /* Full width for links section */
+        margin-left: 0;
+        margin-bottom: 20px;
+        width: 100%;
     }
 
     .grid {
-        grid-template-columns: 1fr; /* Single column layout for grid items */
-        gap: 20px; /* Increase gap if needed */
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .ideas {
-        padding: 10px; /* Reduce padding for smaller screens */
-        margin: 10px; /* Adjust margin for smaller screens */
+        padding: 10px;
+        margin: 10px;
     }
 
     .ideas .idea-item {
-        flex-direction: column; /* Stack image and text vertically */
-        text-align: center; /* Center text */
+        flex-direction: column;
+        text-align: center;
     }
 
     .ideas .idea-item img {
-        margin-right: 0; /* Remove right margin */
-        margin-bottom: 10px; /* Add space below image */
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 }

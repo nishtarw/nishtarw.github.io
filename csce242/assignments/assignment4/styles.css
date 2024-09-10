@@ -1,49 +1,44 @@
-/* General reset for margins and padding */
-        /* Black top div */
-        .top-bar {
-            background-color: #000; /* Black background */
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        /* Placeholder logo on the left */
-        .top-bar .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .top-bar .logo img {
-            height: 40px; /* Placeholder logo height */
-            margin-right: 10px;
-        }
-
-        /* Small text on the right */
-        .top-bar .right-text {
-            font-size: 12px;
-            text-align: right;
-        }
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Include padding and borders in width calculations */
+    box-sizing: border-box;
 }
 
-/* Prevent horizontal scrolling */
+.top-bar {
+    background-color: #000;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.top-bar .right-text {
+    font-size: 12px;
+    text-align: right;
+}
+
 body {
     overflow-x: hidden;
     font-family: Arial, sans-serif;
 }
 
-/* Navbar styling */
 .navbar {
-    background-color: #6c1d45; /* Dark red */
+    background-color: #73000A;
     padding: 10px 0;
     text-align: center;
     width: 100%;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
 }
 
 .navbar a {
@@ -55,35 +50,272 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #8b233e; /* Hover red */
+    background-color: #CC2E40;
 }
 
-/* Container for the image and the overlaying text */
 .header-banner {
     position: relative;
-    text-align: left; /* Align the text to the left */
+    text-align: left;
 }
 
-/* The image itself */
 .header-banner img {
     width: 100%;
     height: auto;
 }
 
-/* The text overlay */
 .text-overlay {
     position: absolute;
-    top: 50%; /* Vertically center */
-    left: 0; /* Align to the left edge of the image */
-    transform: translateY(200%); /* Vertically center relative to itself */
-    background-color: rgba(128, 0, 0, 0.8); /* Semi-transparent background */
+    top: 50%;
+    left: 0;
+    transform: translateY(200%);
+    background-color: rgba(128, 0, 0, 0.8);
     color: white;
     padding: 10px 20px;
     font-size: 2em;
     font-weight: bold;
-
-    /* Move halfway outside the image */
-    width: 50vw; /* Adjust this width as needed */
-    margin-left: 4vw; /* Push it left to be halfway out of the image */
+    width: 50vw;
+    margin-left: 4vw;
 }
 
+.text-content {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+.text-content p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.text-content strong {
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.image-section {
+    flex: 1;
+    overflow: hidden;
+}
+
+.image-section img {
+    width: 100%;
+    height: 51%;
+    object-fit: cover;
+}
+
+.text-section {
+    flex: 1;
+    background-color: #73000A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    position: relative;
+    height: 300px;
+}
+
+.text-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.button {
+    padding: 15px 30px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: white;
+    color: #8B0000;
+}
+
+.info-section {
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: -300px;
+}
+
+.info-section h2 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    color: #333;
+    font-size: 1em;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-section .button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.info-section .button {
+    padding: 10px 20px;
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9em;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.info-section .button:hover {
+    background-color: #a52a2a;
+}
+
+.centered-content {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.centered-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.centered-content .description {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.image-grid figure {
+    text-align: center;
+    width: 220px;
+}
+
+.image-grid figure img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0px;
+}
+
+.image-grid figcaption {
+    font-size: 1em;
+    color: #555;
+    margin-top: 10px;
+}
+
+.image-grid figcaption strong {
+    font-weight: bold;
+}
+
+.black-div {
+    background-color: #000;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    color: white;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.image-container {
+    flex: 1;
+    text-align: left;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 300px;
+}
+
+.text-container {
+    flex: 2;
+    padding-left: 30px;
+    text-align: left;
+}
+
+.text-container h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-container p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.apply-button {
+    margin-top: 20px;
+}
+
+.apply-button a {
+    background-color: #8B0000;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0px;
+}
+
+.apply-button a:hover {
+    background-color: #a52a2a;
+}
+
+.red-div {
+    background-color: #8B0000;
+    height: 100px;
+    width: 100vw;
+}
