@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFEBEE; /* Light pastel pink background */
+    text-align: center;
+}
+
+/* Title section */
+.title-section h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+    color: #F48FB1; /* Pink */
+}
+
+.title-section p {
+    font-size: 1.2em;
+    color: #F48FB1;
+    margin-bottom: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch; /* Make all columns equal height */
+    height: 60vh;
+    margin-top: 20px;
+
+}
+
+.column {
+    text-align: center;
+    padding: 20px;
+    width: 30%;
+    height: 400px;
+    background-color: #FFF9C4; /* Pastel yellow */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h2 {
+    color: #F48FB1; /* Light pastel pink for the headings */
+}
+
+#countDisplay {
+    font-size: 6em;
+    margin-top: 70px;
+    cursor: pointer;
+    color: #F48FB1; /* Pink for the counter text */
+}
+
+#image img {
+    cursor: pointer;
+    max-width: 100%; /* Ensures the image fits inside the div */
+    height: auto;
+}
+
+#slider {
+    position: relative;
+    margin-top: 0px;
+}
+
+#sliderInput {
+    width: 100%;
+    margin-top: 20px;
+    -webkit-appearance: none; /* Remove default appearance */
+    height: 30px; /* Height of the slider track to match the handle */
+    background-color: #FFEBEE; /* Light pink track */
+    outline: none; /* Remove outline */
+    position: relative;
+    border-radius: 5px; /* Rounded slider line edges */
+}
+
+/* Slider thumb (handle) */
+#sliderInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px; /* Make it a square */
+    height: 30px; /* Same height as the slider track */
+    background-color: #F48FB1; /* Pink square thumb */
+    cursor: pointer;
+    border: none;
+    border-radius: 0; /* Perfect square */
+    margin-top: 0px; /* Make sure it's perfectly aligned within the slider line */
+}
+
+#sliderInput::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #F48FB1;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    margin-top: 0px; /* Align for Firefox */
+}
+
+
+#square {
+    width: 100px;
+    height: 100px;
+    background-color: #F48FB1; /* Pink square */
+    position: absolute;
+    margin-top: 20px;
+    top: 120px; /* Increased this value to move it lower */
+    left: 0;
+    transition: left 0.1s ease-in-out; /* Smooth transition */
+}
+
+
+/* Ensure the square doesn't go beyond the slider div */
+.column {
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .column {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}

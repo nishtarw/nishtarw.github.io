@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Title Section -->
+    <div class="title-section">
+        <h1>Assignment 7</h1>
+        <p>Introduction to JavaScript</p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Counter Column -->
+        <div class="column" id="counter">
+            <h2>Count</h2>
+            <div id="countDisplay">0</div>
+        </div>
+
+        <!-- Random Image Column -->
+        <div class="column" id="image">
+            <h2>Random Image</h2>
+            <img src="https://picsum.photos/300" alt="Random" id="randomImage">
+        </div>
+
+        <!-- Slider Column -->
+        <div class="column" id="slider">
+            <h2>Slider Move</h2>
+            <input type="range" id="sliderInput" min="0" max="100" value="50">
+            <div id="square"></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,553 @@
+/* CSS Variables */
+:root {
+    --primary-bg: #ffffff;
+    --secondary-bg: #f0f0f0;
+    --primary-text: #000000;
+    --secondary-text: #333333;
+    --border-color: #cccccc;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Logo and title section aligned left */
+.logo-and-title {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: flex-start;
+}
+
+.logo-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: var(--border-color);
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+    text-align: left;
+}
+
+/* Navigation container */
+.nav-container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+.auth-links {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: var(--secondary-text);
+}
+
+main {
+    flex-grow: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+.featured-artist h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.artist-previews {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.artist-placeholder {
+    width: 200px;
+    height: 300px;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+}
+
+.latest-featured-artist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.artist-placeholder {
+    width: 200px; /* Adjust size as needed */
+    height: 400px; /* Adjust size as needed */
+    background-color: #ddd; /* Placeholder color */
+    border: 1px solid #ccc;
+}
+
+.featured-artist-info {
+    flex: 1; /* Allows this div to take up remaining space */
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Background color for visibility */
+    border: 1px solid #ccc;
+    margin: 0 20px; /* Space between images and text */
+    height: 400px; /* Adjust as needed */
+    padding: 20px;
+    
+}
+
+/* Listener's Choice Section */
+.listeners-choice {
+    background-color: var(--secondary-bg);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    margin-top: 40px;
+    text-align: center;
+}
+
+.listeners-choice h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.listeners-choice p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.choice-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choice-form label {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.choice-form select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.choice-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--primary-text);
+    color: var(--primary-bg);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.choice-form button:hover {
+    background-color: var(--secondary-text);
+}
+
+
+/* Added content section */
+.additional-content {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.additional-content h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.additional-content ul {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-bg);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-home, .icon-arrow {
+    font-size: 24px;
+}
+
+/* Artist Info Page (specific to the new layout) */
+.main-heading {
+    font-size: 28px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.artist-info-section {
+    position: relative; /* Allows positioning of the placeholder image */
+    width: 80%;
+    margin: 0 auto;
+    background-color: var(--secondary-bg);
+    padding: 30px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between sections */
+}
+
+.artist-info-section h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.artist-info-section h2::after {
+    content: "🎧";
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.artist-info-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.artist-info-details div {
+    width: 45%;
+}
+
+.artist-info-details p {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.artist-bio {
+    font-size: 16px;
+    line-height: 1.6;
+    position: relative;
+    top: 46px; /* Adjust this value to move the text down */
+    margin-top: 20px; /* Adjust this value to lower it further */
+}
+
+.discography-events {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discography-events div {
+    width: 30%; /* Adjust width to align items properly */
+    display: flex;
+    flex-direction: column;
+}
+
+.discography-events strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Ensure consistent height for alignment */
+.discography-events > div {
+    min-height: 200px; /* Adjust height as needed to align items */
+    box-sizing: border-box;
+}
+
+/* Placeholder image styling */
+.artist-info-section .placeholder-img {
+    position: absolute; /* Allows precise positioning */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+
+
+/* Song Journal Page */
+.main-heading {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.song-reviews {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.review-card {
+    width: 30%;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    padding: 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-header {
+    margin-bottom: 20px;
+}
+
+.song-title, .artist {
+    display: block;
+    font-weight: bold;
+}
+
+.review-content {
+    margin-bottom: 20px;
+}
+
+.review-content h3 {
+    margin-bottom: 10px;
+}
+
+.add-review {
+    text-align: center;
+    font-weight: bold;
+    color: var(--primary-text);
+}
+.review-content {
+    margin-bottom: 40px; /* Adds space after the review content */
+}
+
+.review-header, .review-content h3 {
+    margin-bottom: 20px; /* Adds space before and after section titles like "My Review" */
+}
+
+.review-content h3 {
+    margin-bottom: 10px; /* Space below "My Review" */
+}
+
+.review-content h3:nth-of-type(2) {
+    margin-top: 20px; /* Add space above "Other Reviews" */
+}
+
+
+/* Musical Quiz Page */
+.quiz-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin-top: -20px; /* Adjust based on the height of your nav bar if needed */
+    width: 100%;
+}
+
+.quiz-content {
+    max-width: 1000px; /* Adjust width as needed */
+    width: 100%;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.quiz-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.quiz-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.question {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.question h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.question ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.question li {
+    margin-bottom: 5px;
+}
+
+/* About Us Page */
+.about-us-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    margin-top: -50px; /* Adjust based on the height of your nav bar if needed */
+    width: 100%;
+}
+
+.about-us-section {
+    width: 100%;
+    max-width: 1000px; /* Adjust width as needed */
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.about-us-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-us-section p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header Styles */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+}
+
+label {
+    font-weight: bold;
+}
+
+
+textarea {
+    resize: vertical; /* Allows vertical resizing only */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .artist-previews {
+        flex-direction: column;
+    }
+
+    .artist-placeholder {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Artist Info Page Responsive */
+    .artist-info-details, .discography-events {
+        flex-direction: column;
+    }
+
+    .artist-info-details div, .discography-events div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
