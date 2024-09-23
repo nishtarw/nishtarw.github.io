@@ -69,6 +69,10 @@ p {
     background-color: #cccccc;
     margin-bottom: 10px;
 }
+.assignment-image img {
+    max-width: 100%; /* Or a specific size */
+    height: auto; /* Maintain aspect ratio */
+}
 
 img {
     width: 100%;
