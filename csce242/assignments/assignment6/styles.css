@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: azure;
+    text-align: center;
+    color: green;
+}
+
+.exercise {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: honeydew;
+    width: 80%;
+    border-radius: 0px;
+}
+
+.slider-container {
+    position: relative;
+    margin-top: 20px;
+}
+
+/* Rectangular slider line */
+#sliderInput {
+    width: 100%;
+    -webkit-appearance: none; /* Remove default appearance */
+    height: 30px; /* Thickness of the slider line */
+    background-color: #FFEBEE; /* Light pink track */
+    outline: none; /* Remove outline */
+    border: none; /* Remove border */
+    border-radius: 0; /* No rounded edges */
+}
+
+/* Slider thumb (square) */
+#sliderInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px; /* Make it a square */
+    height: 30px; /* Same height as the slider thumb */
+    background-color: #F48FB1; /* Pink square thumb */
+    cursor: pointer;
+    border: none;
+    margin-top: 1px; /* Align it centered on the track */
+}
+
+#sliderInput::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background-color: #F48FB1;
+    cursor: pointer;
+    border: none;
+    margin-top: 10px; /* Align for Firefox */
+}
+
+nav {
+    margin-top: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Keep items horizontal */
+    justify-content: center; /* Center the items */
+}
+
+nav li {
+    margin: 0 10px; /* Space between items */
+    position: relative; /* Needed for the pseudo-element */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px; /* Add some padding for better click area */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Add pipe symbol using ::after pseudo-element */
+nav li::after {
+    content: '|'; /* Pipe symbol */
+    margin: 0 5px; /* Space around the pipe */
+}
+
+nav li:last-child::after {
+    content: ''; /* Remove pipe after the last item */
+}
+
+nav a:hover {
+    color: #007BFF; /* Change color on hover */
+}
+
+#picture-chooser {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+#chosenImage {
+    margin-top: 20px; /* Space above the image */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: auto; /* Center the image */
+    margin-right: auto; /* Center the image */
+}
+
+.hidden-small {
+    display: none; /* Initially hide exercise items on small screens */
+}
+
+/* Media queries for larger screens */
+@media only screen and (min-width: 600px) {
+    #toggle-nav {
+        display: none; /* Hide toggle button on larger screens */
+    }
+
+    #nav-items {
+        display: flex; /* Show nav items by default on larger screens */
+    }
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 599px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #toggle-nav {
+        display: block; /* Show toggle button on smaller screens */
+    }
+
+    nav li::after {
+        content: ''; /* Remove pipe symbol on smaller screens */
+    }
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Color Slider and Picture Chooser - Assignment 8</title>
+</head>
+<body>
+    <h1>Assignment 6</h1>
+    <h2>If Statements</h2>
+
+    <!-- Toggle button for smaller screens -->
+    <div id="toggle-nav">▼</div>
+
+    <!-- Navigation items for exercises -->
+    <nav>
+        <ul id="nav-items" class="hidden-small">
+            <li><a href="#" onclick="showExercise('color-slider')">Exercise 1</a></li>
+            <li><a href="#" onclick="showExercise('picture-chooser')">Exercise 2</a></li>
+        </ul>
+    </nav>
+
+    <div class="exercise" id="color-slider" style="display: none;">
+        <h2>Color Slider</h2>
+        <div class="slider-container">
+            <div id="square"></div>
+            <input type="range" id="sliderInput" min="0" max="255" value="0">
+        </div>
+        
+    </div>
+
+    <div class="exercise" id="picture-chooser" style="display: none;">
+        <h2>Picture Chooser</h2>
+        <button onclick="showImage('small')">Small</button>
+        <button onclick="showImage('medium')">Medium</button>
+        <button onclick="showImage('large')">Large</button>
+        <img id="chosenImage" src="" alt="" style="display: none;">
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

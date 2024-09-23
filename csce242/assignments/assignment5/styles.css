@@ -1,81 +1,39 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFEBEE; /* Light pastel pink background */
+    background-color: azure;
     text-align: center;
 }
 
-/* Title section */
-.title-section h1 {
-    font-size: 2.5em;
-    margin-top: 20px;
-    color: #F48FB1; /* Pink */
+.exercise {
+    margin: 20px auto;
+    padding: 10px;
+    background-color: honeydew;
+    width: 80%;
+    border-radius: 5px;
 }
 
-.title-section p {
-    font-size: 1.2em;
-    color: #F48FB1;
-    margin-bottom: 30px;
-}
-
-.container {
-    display: flex;
-    justify-content: space-around;
-    align-items: stretch; /* Make all columns equal height */
-    height: 60vh;
-    margin-top: 20px;
-
-}
-
-.column {
-    text-align: center;
-    padding: 20px;
-    width: 30%;
-    height: 400px;
-    background-color: #FFF9C4; /* Pastel yellow */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+.slider-container {
     position: relative;
+    margin-top: 20px;
 }
 
-h2 {
-    color: #F48FB1; /* Light pastel pink for the headings */
-}
-
-#countDisplay {
-    font-size: 6em;
-    margin-top: 70px;
-    cursor: pointer;
-    color: #F48FB1; /* Pink for the counter text */
-}
-
-#image img {
-    cursor: pointer;
-    max-width: 100%; /* Ensures the image fits inside the div */
-    height: auto;
-}
-
+/* Slider container for overall positioning */
 #slider {
     position: relative;
     margin-top: 0px;
 }
 
+/* Rectangular slider line */
 #sliderInput {
     width: 100%;
-    margin-top: 20px;
-    -webkit-appearance: none; /* Remove default appearance */
-    height: 30px; /* Height of the slider track to match the handle */
+    height: 30px; /* Height of the slider track */
     background-color: #FFEBEE; /* Light pink track */
     outline: none; /* Remove outline */
-    position: relative;
-    border-radius: 5px; /* Rounded slider line edges */
+    border: none; /* Remove border */
+    border-radius: 0; /* No rounded edges */
 }
 
-/* Slider thumb (handle) */
+/* Slider thumb (square) */
 #sliderInput::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -85,7 +43,7 @@ h2 {
     cursor: pointer;
     border: none;
     border-radius: 0; /* Perfect square */
-    margin-top: 0px; /* Make sure it's perfectly aligned within the slider line */
+    margin-top: -5px; /* Align it centered on the track */
 }
 
 #sliderInput::-moz-range-thumb {
@@ -95,35 +53,35 @@ h2 {
     cursor: pointer;
     border: none;
     border-radius: 0;
-    margin-top: 0px; /* Align for Firefox */
+    margin-top: -5px; /* Align for Firefox */
 }
 
-
+/* Square that moves with the slider */
 #square {
-    width: 100px;
-    height: 100px;
+    width: 30px; /* Same width as the slider thumb */
+    height: 30px; /* Same height as the slider thumb */
     background-color: #F48FB1; /* Pink square */
     position: absolute;
-    margin-top: 20px;
-    top: 120px; /* Increased this value to move it lower */
-    left: 0;
+    top: -5px; /* Center it on the slider */
     transition: left 0.1s ease-in-out; /* Smooth transition */
 }
 
-
-/* Ensure the square doesn't go beyond the slider div */
-.column {
-    overflow: hidden;
+/* Navigation styling */
+nav {
+    margin-top: 20px;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        height: auto;
-    }
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-    .column {
-        width: 90%;
-        margin-bottom: 20px;
-    }
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
 }

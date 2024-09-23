@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>The Sound Check</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header and Title -->
+    <header>
+        <div class="logo-and-title">
+            <div class="logo-placeholder"></div>
+            <h1>The Sound Check</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Navigation below the title -->
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist-profiles.html">Artist Profiles</a></li>
+                    <li><a href="song-journal.html">Song Journal</a></li>
+                    <li><a href="musical-quiz.html">Musical Quiz</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="#">Log in</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>Add New Data</h2>
+            <form action="/add-data" method="post">
+                <label for="data-title">Title:</label>
+                <input type="text" id="data-title" name="title" required>
+                
+                <label for="data-description">Description:</label>
+                <textarea id="data-description" name="description" required></textarea>
+                
+                <button type="submit">Add</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Edit Data</h2>
+            <form action="/edit-data" method="post">
+                <label for="edit-id">Select Item to Edit:</label>
+                <select id="edit-id" name="id" required>
+                    <!-- Options populated from database -->
+                </select>
+                
+                <label for="edit-title">New Title:</label>
+                <input type="text" id="edit-title" name="title" required>
+                
+                <label for="edit-description">New Description:</label>
+                <textarea id="edit-description" name="description" required></textarea>
+                
+                <button type="submit">Update</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Delete Data</h2>
+            <form action="/delete-data" method="post">
+                <label for="delete-id">Select Item to Delete:</label>
+                <select id="delete-id" name="id" required>
+                    <!-- Options populated from database -->
+                </select>
+                
+                <button type="submit">Delete</button>
+            </form>
+        </section>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>
