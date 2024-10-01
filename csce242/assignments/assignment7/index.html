@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Drawing Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Assignment 9</h1>
+        <h2>For Loops</h2>
+    </div>
+
+    <!-- Big container div -->
+    <div class="main-container">
+        <!-- Input section at the top of the big div -->
+        <div class="input-section">
+            <label for="starsInput">Insert Stars</label>
+            <input type="number" id="starsInput" placeholder="Enter a number">
+            <button id="drawButton">Draw</button>
+            <span class="error" id="errorMsg"></span>
+        </div>
+
+        <!-- Black div to display stars underneath the input section -->
+        <div class="star-container">
+            <div class="black-div">
+                <canvas id="starCanvas" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
