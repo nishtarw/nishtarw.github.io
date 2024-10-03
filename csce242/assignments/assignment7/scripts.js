@@ -1,64 +1,80 @@
-document.getElementById('drawButton').addEventListener('click', function() {
+document.getElementById('drawButton').addEventListener('click', () => {
     const input = document.getElementById('starsInput').value;
     const errorMsg = document.getElementById('errorMsg');
+    const starMessage = document.getElementById('starMessage');
     const canvas = document.getElementById('starCanvas');
     const ctx = canvas.getContext('2d');
 
-    // Clear previous stars
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    errorMsg.textContent = ''; // Clear previous error message
+    errorMsg.style.display = 'none'; 
+    starMessage.style.display = 'none'; 
 
     const numberOfStars = parseInt(input);
 
     if (numberOfStars <= 0 || isNaN(numberOfStars)) {
-        errorMsg.textContent = 'Please enter a valid number greater than 0.';
+        errorMsg.textContent = '* Invalid Input';
+        errorMsg.style.display = 'block'; 
         return;
     }
 
-    const stars = []; // Array to keep track of stars
+    const stars = []; 
 
-    // Draw stars and store their positions
+    // Draw stars
     for (let i = 0; i < numberOfStars; i++) {
-        const x = Math.random() * (canvas.width - 30) + 15; // Random x position
-        const y = Math.random() * (canvas.height - 30) + 15; // Random y position
-        drawStar(ctx, x, y, 5, 10, 5); // Draw a star
-        stars.push({ x, y }); // Store star position
+        const x = Math.random() * (canvas.width - 30) + 15; 
+        const y = Math.random() * (canvas.height - 30) + 15; 
+
+        drawStar(ctx, x, y, 6, 8, 4); 
+        stars.push({ x, y }); 
     }
 
-    // Add click event for stars
-    canvas.addEventListener('click', function(event) {
+    canvas.addEventListener('click', (event) => {
         const rect = canvas.getBoundingClientRect();
         const mouseX = event.clientX - rect.left;
         const mouseY = event.clientY - rect.top;
 
+        let starClicked = false; 
+
         stars.forEach((star, index) => {
             const dx = mouseX - star.x;
             const dy = mouseY - star.y;
-            if (dx * dx + dy * dy <= 100) { // Check if mouse is close to a star
-                alert(`You clicked on star number ${index + 1}`);
+            if (dx * dx + dy * dy <= 100) { 
+                starMessage.textContent = `You clicked on star number ${index + 1}`;
+                starMessage.style.color = 'black'; // Set the message color to black
+                starMessage.style.display = 'block'; 
+                starMessage.style.top = `${event.clientY}px`; 
+                starMessage.style.left = `${event.clientX + 10}px`; 
+
+                starClicked = true; 
             }
         });
+
+        if (!starClicked) {
+            starMessage.style.display = 'none'; 
+        }
     });
 });
 
-// Function to draw a star
-function drawStar(ctx, x, y, spikes, outerRadius, innerRadius) {
-    const rot = (Math.PI / 2) * 3; // Starting rotation
-    const step = Math.PI / spikes; // Step angle
+// Change the function declaration to an arrow function
+const drawStar = (ctx, x, y, spikes, outerRadius, innerRadius) => {
+    let rot = (Math.PI / 2) * 3; 
+    let step = Math.PI / spikes; 
 
     ctx.beginPath();
-    ctx.moveTo(x, y - outerRadius); // Move to top point
+    ctx.moveTo(x, y - outerRadius); 
 
     for (let i = 0; i < spikes; i++) {
-        ctx.lineTo(x + Math.cos(rot) * outerRadius, y + Math.sin(rot) * outerRadius); // Outer point
+        // Draw outer point
+        ctx.lineTo(x + Math.cos(rot) * outerRadius, y + Math.sin(rot) * outerRadius);
         rot += step;
 
-        ctx.lineTo(x + Math.cos(rot) * innerRadius, y + Math.sin(rot) * innerRadius); // Inner point
+        // Draw inner point
+        ctx.lineTo(x + Math.cos(rot) * innerRadius, y + Math.sin(rot) * innerRadius);
         rot += step;
     }
-    
-    ctx.lineTo(x, y - outerRadius); // Close the star shape
+
+    ctx.lineTo(x, y - outerRadius); 
     ctx.closePath();
-    ctx.fillStyle = 'white';
+    ctx.fillStyle = 'yellow'; 
     ctx.fill();
-}
+};

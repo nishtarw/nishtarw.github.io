@@ -1,4 +1,3 @@
-/* General body styling */
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -9,36 +8,35 @@ body {
     align-items: center;
 }
 
-/* Header styling for titles */
 .header {
     text-align: center;
     margin-top: 20px;
 }
 
-/* Main container holding everything */
 .main-container {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the start (left) */
+    flex-direction: column;
+    align-items: flex-start;
     padding: 20px;
-    width: 350px; /* Container width */
+    width: 350px;
     margin-top: 20px;
-    border: 2px solid #ccc; /* Optional border for visual clarity */
+    border: 2px solid #ccc;
 }
 
-/* Input section at the top of the big div */
 .input-section {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Align items to the start (left) */
-    width: 100%; /* Full width */
+    align-items: center;
+    width: 100%;
 }
 
-/* Input and button styling */
+.input-section label {
+    margin-right: 5px;
+}
+
 input {
-    margin: 10px 0;
+    margin: 10px 5px 10px 0;
     padding: 5px;
-    width: 100%; /* Full width */
+    width: 60px;
 }
 
 button {
@@ -55,28 +53,36 @@ button:hover {
 
 #errorMsg {
     color: red;
-    margin-top: 10px;
+    font-weight: bold;
+    margin-top: 5px;
+    display: none;
+    font-size: 12px;
 }
 
-/* Black div to display stars */
+#starMessage {
+    color: #4caf50;
+    font-weight: bold;
+    margin-top: 15px;
+    display: none;
+}
+
 .star-container {
     display: flex;
-    justify-content: center; /* Center the black div */
+    justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Space between input section and black div */
+    margin-top: 20px;
 }
 
 .black-div {
-    width: 350px; /* Make the black div larger */
-    height: 350px; /* Make the black div larger */
+    width: 350px;
+    height: 350px;
     background-color: black;
-    border: 2px solid white; /* White border */
+    border: 2px solid white;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Canvas where stars will be drawn */
 #starCanvas {
     width: 100%;
     height: 100%;
