@@ -9,7 +9,7 @@ class Bird {
         this.interestingFact = interestingFact;
     }
 
-    // Method to get the title and image formatted as HTML
+   
     getSection() {
         return `
             <h3>${this.name}</h3>
@@ -35,7 +35,7 @@ class Bird {
     
 }
 
-// The array of birds remains unchanged
+
 const birds = [
     new Bird("Hummingbird", "images/hummingbird.jpg", "3-5 inches", "3-5 years", "Nectar (Sugar water)", "Trees", "Tiny little colorful birds, that bring joy to everyone :)"),
     new Bird("Blue Jay", "images/bluejay.jpg", "9-12 inches", "7 years", "nuts, seeds", "Forests", " Blue Jays are related to Crows!"),
@@ -48,8 +48,8 @@ function displayBirds() {
     birds.forEach(bird => {
         const birdCard = document.createElement('div');
         birdCard.className = 'bird-card';
-        birdCard.innerHTML = bird.getSection(); // Use the getSection method
-        birdCard.addEventListener('click', () => showModal(bird)); // Show the modal on click
+        birdCard.innerHTML = bird.getSection(); 
+        birdCard.addEventListener('click', () => showModal(bird)); 
         birdGrid.appendChild(birdCard);
     });
 }
@@ -57,7 +57,7 @@ function displayBirds() {
 function showModal(bird) {
     const modal = document.getElementById('birdModal');
     const modalBody = document.getElementById('modal-body');
-    modalBody.innerHTML = bird.getExpandedSection(); // Use the getExpandedSection method
+    modalBody.innerHTML = bird.getExpandedSection(); 
     modal.style.display = 'block';
 }
 
@@ -65,5 +65,5 @@ function closeModal() {
     document.getElementById('birdModal').style.display = 'none';
 }
 
-// Initialize display
+
 displayBirds();

@@ -780,6 +780,91 @@ select {
             margin-top: 15px; 
             font-size: 16px; 
         }
-    
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 24px;
+            }
+        
+            .artist-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                padding: 10px;
+            }
+        
+            .artist-card {
+                padding: 5px;
+            }
+        
+            .artist-image {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 20px;
+            }
+        
+            .artist-grid {
+                grid-template-columns: 1fr;
+            }
+        
+            .artist-card {
+                margin: 5px;
+            }
+        
+            .nav-arrows {
+                flex-direction: column;
+            }
+        
+            .nav-arrows button {
+                margin: 5px 0;
+                width: 100%;
+            }
+        }
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+        
+            .song-reviews {
+                flex-direction: column;
+                align-items: center;
+            }
+        
+            .review-card {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        
+            .song-image {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .main-heading {
+                font-size: 18px;
+            }
+        
+            .review-card {
+                padding: 15px;
+            }
+        
+            .add-review {
+                padding: 8px;
+            }
+        
+            .modal-content {
+                width: 90%;
+            }
+        
+            .close {
+                font-size: 24px;
+            }
+        }
+        
     }
     
