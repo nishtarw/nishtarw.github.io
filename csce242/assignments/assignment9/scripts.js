@@ -40,7 +40,7 @@ const birds = [
     new Bird("Hummingbird", "images/hummingbird.jpg", "3-5 inches", "3-5 years", "Nectar (Sugar water)", "Trees", "Tiny little colorful birds, that bring joy to everyone :)"),
     new Bird("Blue Jay", "images/bluejay.jpg", "9-12 inches", "7 years", "nuts, seeds", "Forests", " Blue Jays are related to Crows!"),
     new Bird("Cardinal", "images/cardinal.jpg", "7-9 inches", "3 years", "seeds, fruits", "Woodlands", "Cardinals get their red feathers from food"),
-    new Bird("Robin", "images/robin.jpg", "9-11 inches", "2 years", "Insects, fruit", "Gardens, parks", "Robins are known to be very territorial.")
+    new Bird("Robin", "images/Robin.jpg", "9-11 inches", "2 years", "Insects, fruit", "Gardens, parks", "Robins are known to be very territorial.")
 ];
 
 function displayBirds() {
