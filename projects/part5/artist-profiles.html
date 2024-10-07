@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sound Check</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo-and-title">
+           
+            <h1>The Sound Check</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist-profiles.html">Artist Profiles</a></li>
+                    <li><a href="song-journal.html">Song Journal</a></li>
+                    <li><a href="musical-quiz.html">Musical Quiz</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="#">Log in</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <h2 class="main-heading">Artist Info</h2>
+        
+        <section class="artist-grid">
+            <div class="artist-card" onclick="toggleInfo(this)">
+                <img src="images/childishgambino.jpg" alt="Childish Gambino" class="artist-image">
+                <p class="small-text">  Originally by EWatson92 on Flickr, licensed under CC BY 2.0.</p>
+                <div class="artist-info">
+                    <h3>Childish Gambino</h3>
+                    <p><strong>Genre:</strong> R&B/Hip-Hop/Rock/Rap</p>
+                    <p><strong>Country:</strong> America</p>
+                </div>
+                <div class="artist-bio-container" style="display: none;">
+                    <div class="artist-bio" style="display: block;">
+                        <p><strong>Biography:</strong><br>
+                            Childish Gambino is the musical persona of Donald Glover, who is an writer, actor, musician, comedian, producer and director. He was born on September 25th, 1983, In California but moved to Atlanta at a young age. He became famous first for being a writer and an actor, but later released music as mixtapes and EP's. His first major album with a major record was called "Camp" and was released in 2011. After that he had a more hits and released frequently but since "Awaken My love!" in 2016 he has taken 4 years to release each album, one in 2020 and just released two new albums this year! Check out the discography.</p>
+                    </div>
+                    <div class="artist-discography" style="display: none;">
+                        <p><strong>Discography:</strong><br>
+                            EP (2008) Camp (2011) I Am Just a Rapper (2010) I Am Just a Rapper 2 (2011) Because the Internet (2013) STN MTN (2014) Kauai (2014) Awaken, My Love! (2016) 3.15.20 (2020) Atavista (2024) Bando Stone and The New World (2024)</p>
+                    </div>
+                    <div class="artist-events" style="display: none;">
+                        <p><strong>Upcoming Events:</strong><br>
+                        No events at the moment.</p>
+                    </div>
+                    <div class="nav-arrows" style="text-align: center; display: none;">
+                        <button onclick="navigate(this, -1)">←</button>
+                        <button onclick="navigate(this, 1)">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="artist-card" onclick="toggleInfo(this)">
+                <img src="images/lana.jpg" alt="Lana Del Rey" class="artist-image">
+                <p class="small-text">  Image by Georges Biard, licensed under CC BY-SA 3.0.</P>
+                <div class="artist-info">
+                    <h3>Lana Del Rey</h3>
+                    <p><strong>Genre:</strong> Indie/Alt Pop</p>
+                    <p><strong>Country:</strong> America</p>
+                </div>
+                <div class="artist-bio-container" style="display: none;">
+                    <div class="artist-bio" style="display: block;">
+                        <p><strong>Biography:</strong><br>
+                            Lana Del Rey, was born as Elizabeth Woolridge Grant on June 21, 1985, in New York, is a popular artist known for her unique sound and style. She grew up singing in church, and after high school went to Fordham University to study philosophy. She started making music as a teenager but gained major recognition with her 2011 hit "Video Games." Her album Born to Die (2012) featured popular tracks like "Summertime Sadness" and helped establish her career. Lana's music often focuses on themes like love, heartbreak and has a cinematic and nostalgic music.</p>
+                    </div>
+                    <div class="artist-discography" style="display: none;">
+                        <p><strong>Discography:</strong><br>
+                            Lana Del Rey (2010), Born to Die (2012), Ultraviolence (2014), Honeymoon (2015), Lust for Life (2017), Norman Fucking Rockwell! (2019), Chemtrails over the Country Club (2021), Blue Banisters (2021), Did You Know That There’s a Tunnel Under Ocean Blvd (2023)</p>
+                    </div>
+                    <div class="artist-events" style="display: none;">
+                        <p><strong>Upcoming Events:</strong><br>
+                        No events at the moment.</p>
+                    </div>
+                    <div class="nav-arrows" style="text-align: center; display: none;">
+                        <button onclick="navigate(this, -1)">←</button>
+                        <button onclick="navigate(this, 1)">→</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more artist cards as needed -->
+            <div class="artist-card" onclick="toggleInfo(this)">
+                <img src="images/frank.jpg" alt="Frank Ocean" class="artist-image">
+                <p class="small-text"> Originally posted at blonded.co, reviewed on Nov 3, 2023, by GRuban.</p>
+                <div class="artist-info">
+                    <h3>Frank Ocean</h3>
+                    <p><strong>Genre:</strong> R&B</p>
+                    <p><strong>Country:</strong> America</p>
+                </div>
+                <div class="artist-bio-container" style="display: none;">
+                    <div class="artist-bio" style="display: block;">
+                        <p><strong>Biography:</strong><br>
+                            Frank Ocean is an American artist and producer known for his amazing vocals and lyricism. He first gained recognition with his first mixtape "Nostalgia Ultra" before releasing his take off with the album, Channel Orange, which features songs like "Thinkin Bout You" and won him a Grammy award. His most recent album, Blonde, was another hit. This was also in 2016 and his last album as he has stopped making music since then, although we are hoping he'll come back. Aside from music, he is also open about his sexuality and his advocates for social justice. 
+                        </p>
+                    </div>
+                    <div class="artist-discography" style="display: none;">
+                        <p><strong>Discography:</strong><br>
+                            Nostalgia, Ultra (2011), Channel Orange (2012),Blonde (2016)
+                            </p>
+                    </div>
+                    <div class="artist-events" style="display: none;">
+                        <p><strong>Upcoming Events:</strong><br>
+                        No events at the moment.</p>
+                    </div>
+                    <div class="nav-arrows" style="text-align: center; display: none;">
+                        <button onclick="navigate(this, -1)">←</button>
+                        <button onclick="navigate(this, 1)">→</button>
+                    </div>
+                </div>
+            </div>
+            <div class="artist-card" onclick="toggleInfo(this)">
+                <img src="images/marias.jpg" alt="The Marias" class="artist-image">
+                <p class="small-text">  Originally by Julio Enriquez on Flickr, reviewed on June 25, 2019, under CC BY 2.0.</p>
+                <div class="artist-info">
+                    <h3>The Marias</h3>
+                    <p><strong>Genre:</strong> Indie/Alt Pop</p>
+                    <p><strong>Country:</strong> America</p>
+                </div>
+                <div class="artist-bio-container" style="display: none;">
+                    <div class="artist-bio" style="display: block;">
+                        <p><strong>Biography:</strong><br>
+                            Forming in 2016, the Marías are a semi-recent band with lead vocalist and guitarist María Zardoya along with Jesse Perlman, Edward James, and James Conway. Originating from Los Angeles, California, they are renowned for their latin influence, mystical and luscious sounds, and Maria's angelic vocals. The band became well-known because of their EP Superclean, Vol. I, which had the hit song "I Don't Know You." With the success of their first studio album, Cinema, they gradually gained greater recognition over time. The Marías frequently tackle themes of cultural identity and romance and heart break.
+
+                        </p>
+                    </div>
+                    <div class="artist-discography" style="display: none;">
+                        <p><strong>Discography:</strong><br>
+                            EPs Superclean, Vol. I (2017), Superclean, Vol. II (2018),CINEMA (2021),Submarine (2024).</p>
+                    </div>
+                    <div class="artist-events" style="display: none;">
+                        <p><strong>Upcoming Events:</strong><br>
+                        They are currently in the middle of their "Submarine Tour". Check out tickets on ticket master!</p>
+                    </div>
+                    <div class="nav-arrows" style="text-align: center; display: none;">
+                        <button onclick="navigate(this, -1)">←</button>
+                        <button onclick="navigate(this, 1)">→</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

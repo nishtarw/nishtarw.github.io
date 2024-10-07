@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navContainer = document.querySelector('.nav-container');
 
     hamburger.addEventListener('click', function() {
-        navContainer.classList.toggle('active'); // Toggle the active class
+        navContainer.classList.toggle('active'); 
     });
 });
+z

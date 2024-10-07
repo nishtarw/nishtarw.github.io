@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>The Sound Check</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header and Title -->
+    <header>
+        <div class="logo-and-title">
+            
+            <h1>The Sound Check</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- Navigation below the title -->
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist-profiles.html">Artist Profiles</a></li>
+                    <li><a href="song-journal.html">Song Journal</a></li>
+                    <li><a href="musical-quiz.html">Musical Quiz</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                    
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="#">Log in</a>
+            </div>
+        </div>
+    </header>
+
+<!-- Main Content -->
+<main>
+    <section class="featured-artist">
+        <h2>Discover your next favorite artist</h2>
+    </section>
+
+    <section class="latest-featured-artist">
+        <div class="artist-placeholder">
+            <img src="images/theweeknd.jpg" alt="Description of the image" class="artists-image">
+            <p class="small-text">Image by <a href="https://flickr.com/photos/128375980@N04/44778856382">Nicolas Padovani</a> on <a href="https://creativecommons.org/licenses/by/2.0/">Creative Commons BY 2.0</a>.</p>
+    </div>
+        <div class="featured-artist-info">
+            <h3>Latest Featured Artist: The Weeknd</h3>
+            <p>The Weeknd, born Abel Tesfaye, is the latest featured artist, known for his incredible blend of R&B, pop, and hip-hop. Since he burst onto the scene, he has captivated audiences with his angelic vocals and unforgettable songs. From chart-toppers like "Blinding Lights" to "One of the Girls," as well as some of his more underrated tracks, he truly resonates with fans worldwide. His upcoming album, "Hurry Up Tomorrow," is generating a lot of excitement, and fans, including myself, can't wait for its release. Recently, he performed a few songs from the yet-to-be-released album in Brazil, in front of a massive crowd of 70,000 fans. We all love The Weeknd!</p>
+        </div>
+        <div class="artist-placeholder">
+            <img src="images/theweeknd2.jpeg" alt="The Weeknd" class="artists-image">
+            <p class="small-text"> Image by <a href="https://500px.com/photo/253662129/the-weeknd-by-pedro-mora">Pedro Mora</a> on <a href="https://500px.com">500px</a>.</p>
+        </div>
+    </section>
+    <!-- Listener's Choice Section -->
+<section class="listeners-choice">
+    <h2>Listener's Choice</h2>
+    <p>Vote for your favorite song or artist of the month! Your choices will help us highlight the top picks on our homepage.</p>
+    
+    <form class="choice-form">
+        <label for="song-artist">Select your choice:</label>
+        <select id="song-artist" name="song-artist">
+            <option value="song1">Bruno Mars</option>
+            <option value="song2">Don Toliver</option>
+            <option value="song3">Taylor Swift</option>
+            <option value="song4">Kali Uchis</option>
+        </select>
+        
+        <button type="submit">Submit</button>
+    </form>
+</section>
+
+<script src="scripts.js"></script>
+
+    
+
+</body>
+</html>
