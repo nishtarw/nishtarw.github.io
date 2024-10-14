@@ -78,61 +78,61 @@ document.querySelectorAll('.faq-question').forEach(question => {
 });
 
 //json 
-// Assuming you have a function to load and display artists
-const loadArtists = async () => {
-    try {
-        const response = await fetch('data.json');
-        const artists = await response.json();
+// Select the container where the artist profiles will be displayed
+const container = document.getElementById('artist-profiles');
 
-        const artistContainer = document.getElementById('artist-container');
-    
+// Fetch the JSON data from the specified location
+fetch('projects/part6/data.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        // Loop through the array of artist profiles
+        data.forEach(artist => {
+            // Create a card for each artist
+            const card = document.createElement('div');
+            card.className = 'artist-card';
 
-        artists.forEach(artist => {
-            const artistCard = document.createElement('div');
-            artistCard.className = 'artist-card';
-
-            // Create and append the artist image
+            // Create elements for artist information
             const img = document.createElement('img');
             img.src = artist.image;
             img.alt = artist.name;
+            img.className = 'artist-image';
 
-            // Create and append the image credit
-            const imgCredit = document.createElement('p');
-            imgCredit.className = 'image-credit';
-            imgCredit.textContent = artist.image_credit; // Set the image credit text
-
-            // Create and append other artist details (e.g., name, genre, etc.)
             const name = document.createElement('h2');
             name.textContent = artist.name;
 
             const genre = document.createElement('p');
             genre.textContent = `Genre: ${artist.genre}`;
 
+            const country = document.createElement('p');
+            country.textContent = `Country: ${artist.country}`;
+
             const biography = document.createElement('p');
             biography.textContent = artist.biography;
 
             const discography = document.createElement('p');
-            discography.textContent = `Discography: ${artist.discography.join(', ')}`;
+            discography.innerHTML = `<strong>Discography:</strong> ${artist.discography.join(', ')}`;
 
             const upcomingEvents = document.createElement('p');
-            upcomingEvents.textContent = `Upcoming Events: ${artist.upcomingEvents}`;
+            upcomingEvents.innerHTML = `<strong>Upcoming Events:</strong> ${artist.upcomingEvents}`;
 
-            // Append all elements to the artist card
-            artistCard.appendChild(img);
-            artistCard.appendChild(imgCredit); // Append the image credit
-            artistCard.appendChild(name);
-            artistCard.appendChild(genre);
-            artistCard.appendChild(biography);
-            artistCard.appendChild(discography);
-            artistCard.appendChild(upcomingEvents);
+            // Append the elements to the card
+            card.appendChild(img);
+            card.appendChild(name);
+            card.appendChild(genre);
+            card.appendChild(country);
+            card.appendChild(biography);
+            card.appendChild(discography);
+            card.appendChild(upcomingEvents);
 
-            // Append the artist card to the container
-            artistContainer.appendChild(artistCard);
+            // Append the card to the container
+            container.appendChild(card);
         });
-    } catch (error) {
-        console.error('Error loading artists:', error);
-    }
-};
-
-// Call the function to load artists when the page loads
-window.onload = loadArtists;
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
