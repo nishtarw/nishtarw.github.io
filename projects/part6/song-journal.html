@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Sound Check</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header and Title -->
+    <header>
+        <div class="logo-and-title">
+            
+            <h1>The Sound Check</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Navigation below the title -->
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist-profiles.html">Artist Profiles</a></li>
+                    <li><a href="song-journal.html">Song Journal</a></li>
+                    <li><a href="musical-quiz.html">Musical Quiz</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="#">Log in</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <!-- Heading -->
+        <h2 class="main-heading">Our Song Reviews</h2>
+        
+        <!-- Song Reviews Section -->
+        <section class="song-reviews">
+            <div class="review-card">
+                <img src="images/theweeknd3.jpg" alt="Faith - The Weeknd" class="song-image">
+                <p class="small-text">  Originally by pado_ on Flickr, reviewed on Nov 12, 2018. Licensed under CC BY 2.0. </p>
+               
+                <div class="review-header">
+                    <span class="song-title">Song Title: Faith</span>
+                    <span class="artist">Artist: The Weeknd</span>
+                </div>
+                <div class="review-content">
+                    <h3>My Review</h3>
+                    <p>Giving this song a 8/10. This song by The Weeknd is definitely one of my favorites from the album...</p>
+                    <h3>Other Reviews</h3>
+                    <p>Louiss: "I love this album so much, I agree, I can literally feel his lyrics."</p>
+                    <p>Jes444: "5/10. I feel like it's kinda basic, I don't see what you guys are talking about."</p>
+                </div>
+                <button class="add-review" onclick="openModal()">Add a review</button>
+            </div>
+
+            <div class="review-card">
+                <img src="images/sza.jpg" alt="Normal Girl - SZA" class="song-image">
+                <p class="small-text"> Smino and Ravyn Lenae at REBEL, Toronto, Aug 23, 2017. Photo by Erin Cazes for The Come Up Show. </p>
+                <div class="review-header">
+                    <span class="song-title">Song Title: Normal Girl</span>
+                    <span class="artist">Artist: SZA</span>
+                </div>
+                <div class="review-content">
+                    <h3>My Review</h3>
+                    <p>Giving this song a 7/10. I love the concept of the song because it feels relatable...</p>
+                    <h3>Other Reviews</h3>
+                    <p>Mayajs34: 10/10 for me. I've never heard something more relatable.</p>
+                </div>
+                <button class="add-review" onclick="openModal()">Add a review</button>
+            </div>
+
+            <div class="review-card">
+                <img src="images/cas.jpg" alt="Cry - Cigarettes After Sex" class="song-image">
+                <p class="small-text"> Originally by Krists Luhaers on Flickr, reviewed on July 20, 2017. Licensed under CC BY 2.0.</p>
+                <div class="review-header">
+                    <span class="song-title">Song Title: Cry</span>
+                    <span class="artist">Artist: Cigarettes After Sex</span>
+                </div>
+                <div class="review-content">
+                    <h3>My Review</h3>
+                    <p>10/10. This is my go-to crying song. It features the most beautiful instrumentation...</p>
+                    <h3>Other Reviews</h3>
+                    <p>mikeR334: I cry to this song every day.</p>
+                    <p>burgers50: 1/10, all their songs sound the same.</p>
+                </div>
+                <button class="add-review" onclick="openModal()">Add a review</button>
+            </div>
+        </section>
+        </div>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
