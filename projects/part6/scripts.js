@@ -78,34 +78,61 @@ document.querySelectorAll('.faq-question').forEach(question => {
 });
 
 //json 
-document.addEventListener('DOMContentLoaded', () => {
-    fetch('data.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok: ' + response.statusText);
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log(data); // Log the fetched data
-            displayArtists(data);
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
-});
+// Assuming you have a function to load and display artists
+const loadArtists = async () => {
+    try {
+        const response = await fetch('data.json');
+        const artists = await response.json();
 
-const displayArtists = (artists) => {
-    const artistGrid = document.querySelector('.artist-grid');
-    artists.forEach(artist => {
-        const artistCard = document.createElement('div');
-        artistCard.classList.add('artist-card');
-        artistCard.innerHTML = `
-            <img src="${artist.image}" alt="${artist.name}">
-            <h3>${artist.name}</h3>
-            <p>Discography: ${artist.discography.join(', ')}</p>
-            <p>Upcoming Events: ${artist.upcoming_events.join(', ')}</p>
-        `;
-        artistGrid.appendChild(artistCard);
-    });
+        const artistContainer = document.getElementById('artist-container');
+    
+
+        artists.forEach(artist => {
+            const artistCard = document.createElement('div');
+            artistCard.className = 'artist-card';
+
+            // Create and append the artist image
+            const img = document.createElement('img');
+            img.src = artist.image;
+            img.alt = artist.name;
+
+            // Create and append the image credit
+            const imgCredit = document.createElement('p');
+            imgCredit.className = 'image-credit';
+            imgCredit.textContent = artist.image_credit; // Set the image credit text
+
+            // Create and append other artist details (e.g., name, genre, etc.)
+            const name = document.createElement('h2');
+            name.textContent = artist.name;
+
+            const genre = document.createElement('p');
+            genre.textContent = `Genre: ${artist.genre}`;
+
+            const biography = document.createElement('p');
+            biography.textContent = artist.biography;
+
+            const discography = document.createElement('p');
+            discography.textContent = `Discography: ${artist.discography.join(', ')}`;
+
+            const upcomingEvents = document.createElement('p');
+            upcomingEvents.textContent = `Upcoming Events: ${artist.upcomingEvents}`;
+
+            // Append all elements to the artist card
+            artistCard.appendChild(img);
+            artistCard.appendChild(imgCredit); // Append the image credit
+            artistCard.appendChild(name);
+            artistCard.appendChild(genre);
+            artistCard.appendChild(biography);
+            artistCard.appendChild(discography);
+            artistCard.appendChild(upcomingEvents);
+
+            // Append the artist card to the container
+            artistContainer.appendChild(artistCard);
+        });
+    } catch (error) {
+        console.error('Error loading artists:', error);
+    }
 };
+
+// Call the function to load artists when the page loads
+window.onload = loadArtists;
