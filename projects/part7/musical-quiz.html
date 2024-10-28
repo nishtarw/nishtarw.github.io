@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sound Check</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header and Title -->
+    <header>
+        <div class="logo-and-title">
+            
+            <h1>The Sound Check</h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="artist-profiles.html">Artist Profiles</a></li>
+                    <li><a href="song-journal.html">Song Journal</a></li>
+                    <li><a href="musical-quiz.html">Musical Quiz</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="admin.html">Admin</a></li>
+                </ul>
+            </nav>
+            <div class="auth-links">
+                <a href="#">Log in</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="quiz-container">
+            <h1>Musical Quiz</h1>
+            <div class="quiz-content">
+                <h2>What artist are you most like?</h2>
+                <p>Answer questions below to find out</p>
+                
+                <div class="question">
+                    <h3>What kind of vibe do you prefer when hanging out?</h3>
+                    <ul>
+                        <li><input type="radio" id="vibe1" name="vibe" value="chill"><label for="vibe1">Chill night with a few friends.</label></li>
+                        <li><input type="radio" id="vibe2" name="vibe" value="parties"><label for="vibe2">Big parties and social events</label></li>
+                        <li><input type="radio" id="vibe3" name="vibe" value="adventures"><label for="vibe3">Exploring new experiences and adventures</label></li>
+                        <li><input type="radio" id="vibe4" name="vibe" value="quiet"><label for="vibe4">Quiet evenings alone.</label></li>
+                    </ul>
+                </div>
+                
+                <div class="question">
+                    <h3> What role does music play in your life?</h3>
+                    <ul>
+                        <li><input type="radio" id="music1" name="music" value="reason"><label for="music1">It's the only reason I live.</label></li>
+                        <li><input type="radio" id="music2" name="music" value="no_care"><label for="music2">I don't care for it.</label></li>
+                        <li><input type="radio" id="music3" name="music" value="cope"><label for="music3">It helps me cope with my feelings.</label></li>
+                        <li><input type="radio" id="music4" name="music" value="sometimes"><label for="music4">I listen to it sometimes.</label></li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <h3>How do you feel about collabs in music?</h3>
+                    <ul>
+                        <li><input type="radio" id="collab1" name="collab" value="hate"><label for="collab1">I hate it.</label></li>
+                        <li><input type="radio" id="collab2" name="collab" value="love"><label for="collab2">I love it.</label></li>
+                        <li><input type="radio" id="collab3" name="collab" value="like"><label for="collab3">I like it if it sounds good.</label></li>
+                        <li><input type="radio" id="collab4" name="collab" value="dont_mind"><label for="collab4">I don't mind.</label></li>
+                    </ul>
+                </div>
+
+                <div class="question">
+                    <h3>What themes are most like you?</h3>
+                    <ul>
+                        <li><input type="radio" id="theme1" name="theme" value="nostalgic"><label for="theme1">Nostalgic romance and heartbreak</label></li>
+                        <li><input type="radio" id="theme2" name="theme" value="emotional"><label for="theme2">Emotional depth and intimacy</label></li>
+                        <li><input type="radio" id="theme3" name="theme" value="hustle"><label for="theme3">Hustle and ambition</label></li>
+                        <li><input type="radio" id="theme4" name="theme" value="rebellion"><label for="theme4">Rebellion</label></li>
+                    </ul>
+                </div>
+
+                <div class="quiz-submit">
+                    <button type="submit" id="submitBtn">Submit</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
